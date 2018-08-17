@@ -1,5 +1,7 @@
 import { Directive, HostListener, HostBinding, ElementRef } from '@angular/core';
 
+// HostBinding - bind a property to the host
+
 @Directive({
   selector: '[credit-card]'
 })
@@ -24,6 +26,7 @@ export class CreditCardDirective {
 
     input.value = numbers.join(' ');
 
+    // change the border user enters character that is not number
     this.border = '';
     if (/[^\d]+/.test(trimmed)) {
       this.border = '1px solid red';

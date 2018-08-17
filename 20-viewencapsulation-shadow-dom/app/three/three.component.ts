@@ -1,5 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
+// writing global styles into the dom
+
 @Component({
   selector: 'example-three',
   encapsulation: ViewEncapsulation.None,

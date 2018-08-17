@@ -1,5 +1,6 @@
 import { Input, Directive, ElementRef, OnInit } from '@angular/core';
 
+// allows use to control the directive from inside your componets using exportAs 
 @Directive({
   selector: '[tooltip]',
   exportAs: 'tooltip'
@@ -25,6 +26,7 @@ export class TooltipDirective implements OnInit {
     private element: ElementRef
   ) {}
 
+   // create you tooltip
   ngOnInit() {
     this.tooltipElement.className = 'tooltip';
     this.element.nativeElement.appendChild(this.tooltipElement);

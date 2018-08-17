@@ -31,6 +31,8 @@ export class AppComponent {
     age: 41,
     location: 'California'
   }];
+
+   // change some data inside the constryctor
   constructor() {
     setTimeout(() => {
       this.items = [...this.items, { name: 'Matt Skiba', age: 40, location: 'California' }];

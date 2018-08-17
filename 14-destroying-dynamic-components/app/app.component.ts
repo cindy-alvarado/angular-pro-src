@@ -32,6 +32,8 @@ export class AppComponent implements AfterContentInit {
     this.component.instance.submitted.subscribe(this.loginUser);
   }
 
+  // dynamically distroy the component
+
   destroyComponent() {
     this.component.destroy();
   }

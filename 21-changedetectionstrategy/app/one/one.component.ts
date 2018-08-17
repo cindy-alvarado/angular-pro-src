@@ -1,5 +1,10 @@
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
+//ChangeDectionStartegey.OnPush
+// onPush is good for speeding up application with stateless or presentational components
+// stateless components - doesnt typically have loocal state or keep state in the local directy
+// will emit the via an even output , EventEmitter
+
 @Component({
   selector: 'example-one',
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <div>
+    <!-- add the name of your custom directive to the element as an attribute -->
       <label>
         Credit Card Number
         <input 

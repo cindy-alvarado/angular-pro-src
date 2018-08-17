@@ -40,14 +40,19 @@ export class AuthFormComponent implements AfterContentInit, AfterViewInit {
 
   @Output() submitted: EventEmitter<User> = new EventEmitter<User>();
 
+  // use as an alternative to setTimeout
+  // change detector ref 
+  // imported at top from Angular caore
   constructor(private cd: ChangeDetectorRef) {}
 
+  // we are changing data after the view has been completed
   ngAfterViewInit() {
     console.log(this.email);
     if (this.message) {
       this.message.forEach((message) => {
         message.days = 30;
       });
+      // change detctor ref called here
       this.cd.detectChanges();
     }
   }

@@ -1,4 +1,6 @@
 import { Component, Output, ViewChild, AfterViewInit, EventEmitter, ContentChildren, QueryList, AfterContentInit } from '@angular/core';
+/* QueryList is a live collection and will be updated after you add 
+and remove particular componets from that QueryList */
 
 import { AuthRememberComponent } from './auth-remember.component';
 import { AuthMessageComponent } from './auth-message.component';
@@ -32,6 +34,10 @@ export class AuthFormComponent implements AfterContentInit, AfterViewInit {
 
   showMessage: boolean;
 
+  // query the AuthMessageComponent
+  // named message:
+  // type AuthMessageComponent
+
   @ViewChild(AuthMessageComponent) message: AuthMessageComponent;
 
   @ContentChildren(AuthRememberComponent) remember: QueryList<AuthRememberComponent>;
@@ -42,6 +48,8 @@ export class AuthFormComponent implements AfterContentInit, AfterViewInit {
     // this.message.days = 30;
   }
   
+
+  // use this if you want to change the data afetr the view has been inititalized
   ngAfterContentInit() {
     if (this.message) {
       this.message.days = 30;

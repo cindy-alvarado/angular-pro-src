@@ -44,17 +44,26 @@ export class AuthFormComponent implements AfterContentInit, AfterViewInit {
   @Output() submitted: EventEmitter<User> = new EventEmitter<User>();
 
   constructor(
+    // initialization functionality on a class
+    // declare as private or public 
+    // public useful for testing 
     private renderer: Renderer,
     private cd: ChangeDetectorRef
   ) {}
 
   ngAfterViewInit() {
+    // pass in the nativeElement as your 1st argument
     this.renderer.setElementAttribute(this.email.nativeElement, 'placeholder', 'Enter your email address');
+    // VS code helper functionality gives you the three agruments the should be passed in.
     this.renderer.setElementClass(this.email.nativeElement, 'email', true);
     this.renderer.invokeElementMethod(this.email.nativeElement, 'focus');
+
+    // in lou of using
+
     // this.email.nativeElement.setAttribute('placeholder', 'Enter your email address');
     // this.email.nativeElement.classList.add('email');
     // this.email.nativeElement.focus();
+
     if (this.message) {
       this.message.forEach((message) => {
         message.days = 30;

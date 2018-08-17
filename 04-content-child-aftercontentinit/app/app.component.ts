@@ -14,6 +14,8 @@ import { User } from './auth-form/auth-form.interface';
         </button>
       </auth-form>
       <auth-form (submitted)="loginUser($event)">
+        <!-- eveverything inside inside the auth-form directive 
+            is the content child -->
         <h3>Login</h3>
         <auth-remember
           (checked)="rememberUser($event)">
@@ -21,6 +23,7 @@ import { User } from './auth-form/auth-form.interface';
         <button type="submit">
           Login
         </button>
+        <!-- end content child -->
       </auth-form>
     </div>
   `

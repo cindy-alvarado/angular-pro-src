@@ -41,6 +41,7 @@ export class AppComponent implements AfterContentInit {
   }
 
   moveComponent() {
+    // move / reorder a specific component
     this.entry.move(this.component.hostView, 1);
   }
 

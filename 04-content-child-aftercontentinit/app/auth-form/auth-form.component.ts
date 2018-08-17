@@ -27,15 +27,22 @@ import { User } from './auth-form.interface';
     </div>
   `
 })
+
+// AfterContentInit intent is a Angular Core LifeCycle hook
 export class AuthFormComponent implements AfterContentInit {
 
   showMessage: boolean;
 
+  // query the authremember component 
+  // give it a name
+  // specify the type
   @ContentChild(AuthRememberComponent) remember: AuthRememberComponent;
 
   @Output() submitted: EventEmitter<User> = new EventEmitter<User>();
 
+  // implements the AfterContentInit LifeCycle hook  
   ngAfterContentInit() {
+    // logic to showMessage
     if (this.remember) {
       this.remember.checked.subscribe((checked: boolean) => this.showMessage = checked);
     }

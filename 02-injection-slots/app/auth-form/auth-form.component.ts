@@ -7,6 +7,7 @@ import { User } from './auth-form.interface';
   template: `
     <div>
       <form (ngSubmit)="onSubmit(form.value)" #form="ngForm">
+        <!-- select attribute serves as injection slot could also use  class names ids or elements-->
         <ng-content select="h3"></ng-content>
         <label>
           Email address

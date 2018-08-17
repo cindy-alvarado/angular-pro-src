@@ -1,7 +1,10 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
+
+// using the full native web platform 
+
 @Component({
-  selector: 'example-two',
+  selector: 'example-two', 
   encapsulation: ViewEncapsulation.Native,
   styles: [`
     .example-two {

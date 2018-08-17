@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+ // default srategy
 @Component({
   selector: 'example-one',
   styles: [`

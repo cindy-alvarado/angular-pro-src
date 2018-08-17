@@ -1,5 +1,9 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
+// shows how to use XhangeDetection to make the application faster
+// default ChangeDetection run everytime we change something
+
+
 @Component({
   selector: 'app-root',
   changeDetection: ChangeDetectionStrategy.Default,

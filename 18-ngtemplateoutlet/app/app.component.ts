@@ -8,6 +8,7 @@ import { User } from './auth-form/auth-form.interface';
   selector: 'app-root',
   template: `
     <div>
+    <!-- gives you a declarative way of injecting a template -->
       <ng-container
         [ngTemplateOutlet]="tmpl">
       </ng-container>

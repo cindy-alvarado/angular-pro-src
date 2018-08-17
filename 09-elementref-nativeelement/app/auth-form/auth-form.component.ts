@@ -16,6 +16,8 @@ import { User } from './auth-form.interface';
         <ng-content select="h3"></ng-content>
         <label>
           Email address
+
+          <!-- import the template ref to the input element using #email -->
           <input type="email" name="email" ngModel #email>
         </label>
         <label>
@@ -35,6 +37,8 @@ export class AuthFormComponent implements AfterContentInit, AfterViewInit {
 
   showMessage: boolean;
 
+// this is of type ElementRef because we are going to query an element directly
+// the paramater being passed in is the email template ref (#email)
   @ViewChild('email') email: ElementRef;
 
   @ViewChildren(AuthMessageComponent) message: QueryList<AuthMessageComponent>;
@@ -46,7 +50,10 @@ export class AuthFormComponent implements AfterContentInit, AfterViewInit {
   constructor(private cd: ChangeDetectorRef) {}
 
   ngAfterViewInit() {
+    // angular nativeElement to expose dom nodes
+    // this sets a placehollder on the email input
     this.email.nativeElement.setAttribute('placeholder', 'Enter your email address');
+    // add a class to the email
     this.email.nativeElement.classList.add('email');
     this.email.nativeElement.focus();
     if (this.message) {
@@ -57,6 +64,7 @@ export class AuthFormComponent implements AfterContentInit, AfterViewInit {
     }
   }
   
+
   ngAfterContentInit() {
     if (this.remember) {
       this.remember.forEach((item) => {
