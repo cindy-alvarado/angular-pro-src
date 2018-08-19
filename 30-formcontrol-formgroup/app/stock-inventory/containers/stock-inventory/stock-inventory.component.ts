@@ -6,8 +6,8 @@ import { FormControl, FormGroup, FormArray } from '@angular/forms';
   styles: ['stock-inventory.component.scss'],
   template: `
     <div class="stock-inventory">
+      <!--  add [forGroup] to form tag to bind -->   
       <form [formGroup]="form" (ngSubmit)="onSubmit()">
-
         <div formGroupName="store">
           <input 
             type="text" 
@@ -23,7 +23,7 @@ import { FormControl, FormGroup, FormArray } from '@angular/forms';
           <button 
             type="submit"
             [disabled]="form.invalid">
-            Order stock
+            Order stock 
           </button>
         </div>
 

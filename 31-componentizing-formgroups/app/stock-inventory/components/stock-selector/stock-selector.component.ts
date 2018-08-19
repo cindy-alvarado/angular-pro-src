@@ -8,7 +8,7 @@ import { FormGroup } from '@angular/forms';
     <div class="stock-selector" [formGroup]="parent">
 
     </div>
-  `
+  ` 
 })
 export class StockSelectorComponent {
   @Input()

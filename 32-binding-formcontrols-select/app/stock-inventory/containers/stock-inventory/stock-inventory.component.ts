@@ -38,7 +38,7 @@ import { Product } from '../../models/product.interface';
   `
 })
 export class StockInventoryComponent {
-
+ // corresponds with the product interface
   products: Product[] = [
     { "id": 1, "price": 2800, "name": "MacBook Pro" },
     { "id": 2, "price": 50, "name": "USB-C Adaptor" },

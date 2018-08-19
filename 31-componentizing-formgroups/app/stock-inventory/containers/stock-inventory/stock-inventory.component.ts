@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormArray } from '@angular/forms';
 
+// *NOTE: Containers are smart componets, they directly interact with data
+
 @Component({
   selector: 'stock-inventory',
   styles: ['stock-inventory.component.scss'],
   template: `
     <div class="stock-inventory">
       <form [formGroup]="form" (ngSubmit)="onSubmit()">
-
+        
         <stock-branch
           [parent]="form">
         </stock-branch>
@@ -35,6 +37,7 @@ import { FormControl, FormGroup, FormArray } from '@angular/forms';
   `
 })
 export class StockInventoryComponent {
+  // setting up the structure of the form
   form = new FormGroup({
     store: new FormGroup({
       branch: new FormControl(''),
@@ -44,6 +47,8 @@ export class StockInventoryComponent {
       product_id: new FormControl(''),
       quantity: new FormControl(10)
     }),
+    // formArray allows us to create a collection of 
+    // formControls, or formGroups
     stock: new FormArray([])
   })
 

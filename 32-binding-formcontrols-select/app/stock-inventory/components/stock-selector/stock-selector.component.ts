@@ -3,6 +3,11 @@ import { FormGroup } from '@angular/forms';
 
 import { Product } from '../../models/product.interface';
 
+
+// ngFor can only be applied to a <template>. 
+// *ngFor is the short form that can be applied to any element and the 
+// <template> element is created implicitly behind the scene.
+
 @Component({
   selector: 'stock-selector',
   styleUrls: ['stock-selector.component.scss'],
@@ -34,6 +39,7 @@ export class StockSelectorComponent {
   @Input()
   parent: FormGroup;
   
+  // Inject product data
   @Input()
   products: Product[];
 }
