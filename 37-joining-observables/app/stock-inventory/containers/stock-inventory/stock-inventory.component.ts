@@ -49,35 +49,44 @@ export class StockInventoryComponent implements OnInit {
 
   products: Product[];
 
+  // setup the product map
   productMap: Map<number, Product>;
 
   form = this.fb.group({
     store: this.fb.group({
       branch: '',
       code: ''
-    }),
+    }),  
     selector: this.createStock({}),
     stock: this.fb.array([])
   })
 
+  
   constructor(
+    // importing the service and dependency injecting inside the contructor
     private fb: FormBuilder,
     private stockService: StockInventoryService
   ) {}
 
   ngOnInit() {
+    //oberseravble of the cart 
     const cart = this.stockService.getCartItems();
+    //oberseravble of the products
     const products = this.stockService.getProducts();
 
     Observable
+      // resolve both cart data and product data at the same time
       .forkJoin(cart, products)
+      // subscribe (array desctructuring) to the data and type check it
       .subscribe(([cart, products]: [Item[], Product[]]) => {
-        
+        // create the data structure 
         const myMap = products
           .map<[number, Product]>(product => [product.id, product]);
         
+        // assign the products the map productMap  
         this.productMap = new Map<number, Product>(myMap);
         this.products = products;
+        // itierate over the cart item
         cart.forEach(item => this.addStock(item));
       });
 

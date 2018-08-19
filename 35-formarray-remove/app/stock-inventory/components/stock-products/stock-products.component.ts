@@ -32,16 +32,18 @@ import { FormGroup, FormArray } from '@angular/forms';
     </div>
   `
 })
-export class StockProductsComponent {
+export class StockProductsComponent { 
   @Input()
   parent: FormGroup;
 
   @Output()
   removed = new EventEmitter<any>();
-
-  onRemove(group, index) {
+ 
+  // Typescript : when declaring type use : 
+  onRemove({group, index} : { group: FormGroup, index: number}) {
     this.removed.emit({ group, index });
   }
+
 
   get stocks() {
     return (this.parent.get('stock') as FormArray).controls;

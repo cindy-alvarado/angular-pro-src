@@ -61,6 +61,7 @@ export class StockInventoryComponent {
     ])
   })
 
+  // this makes the formbuilder API avavible inside the component.   
   constructor(
     private fb: FormBuilder
   ) {}

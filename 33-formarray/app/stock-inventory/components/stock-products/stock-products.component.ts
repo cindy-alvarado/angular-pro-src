@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { FormGroup, FormArray } from '@angular/forms';
 
+// using the formArray we will ittirate over the products data
+
 @Component({
   selector: 'stock-products',
   styleUrls: ['stock-products.component.scss'],
@@ -34,6 +36,7 @@ export class StockProductsComponent {
   @Input()
   parent: FormGroup;
 
+  // formArray is imported from angular/forms 
   get stocks() {
     return (this.parent.get('stock') as FormArray).controls;
   }

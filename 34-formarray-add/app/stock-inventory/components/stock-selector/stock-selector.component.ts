@@ -42,6 +42,7 @@ export class StockSelectorComponent {
   @Output()
   added = new EventEmitter<any>();
 
+   // get access to the formGroup then add our value onClick
   onAdd() {
     this.added.emit(this.parent.get('selector').value);
   }

@@ -75,6 +75,7 @@ export class StockInventoryComponent {
 
   removeStock({ group, index }: { group: FormGroup, index: number }) {
     const control = this.form.get('stock') as FormArray;
+    // same as slice 
     control.removeAt(index);
   }
 

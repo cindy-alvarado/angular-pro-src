@@ -52,13 +52,17 @@ export class StockInventoryComponent {
       branch: new FormControl(''),
       code: new FormControl('')
     }),
+    // call our createStock function
     selector: this.createStock({}),
+    // return a new stock item
     stock: new FormArray([
       this.createStock({ product_id: 1, quantity: 10 }),
       this.createStock({ product_id: 3, quantity: 50 }),
     ])
   })
-
+ 
+  // wrapper function that creates the formGroups 
+  // parseInt convert string to interger
   createStock(stock) {
     return new FormGroup({
       product_id: new FormControl(parseInt(stock.product_id, 10) || ''),

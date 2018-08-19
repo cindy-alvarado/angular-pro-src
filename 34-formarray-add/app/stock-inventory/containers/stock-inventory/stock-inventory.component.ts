@@ -67,6 +67,8 @@ export class StockInventoryComponent {
     });
   }
 
+  // set the control to the stock FormArray
+  // push the stock in to nhe array as a fromGroup (createStock)
   addStock(stock) {
     const control = this.form.get('stock') as FormArray;
     control.push(this.createStock(stock));
