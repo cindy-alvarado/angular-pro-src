@@ -42,6 +42,7 @@ export class StockSelectorComponent {
   @Output()
   added = new EventEmitter<any>();
 
+  // resets the form control after the add button is clicked
   onAdd() {
     this.added.emit(this.parent.get('selector').value);
     this.parent.get('selector').reset({

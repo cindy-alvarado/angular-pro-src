@@ -1,3 +1,5 @@
+// Calulates a total and displays it on the screen
+
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
 
@@ -87,12 +89,14 @@ export class StockInventoryComponent implements OnInit {
         cart.forEach(item => this.addStock(item));
 
         this.calculateTotal(this.form.get('stock').value);
+        // subscribe to the reactive form for value changes
         this.form.get('stock')
           .valueChanges.subscribe(value => this.calculateTotal(value));
 
       });
 
   }
+
 
   calculateTotal(value: Item[]) {
     const total = value.reduce((prev, next) => {

@@ -1,3 +1,9 @@
+// creates a custom form control (counter)
+// sets a min
+// sets a max
+// increments
+
+
 import { Component, Input, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
