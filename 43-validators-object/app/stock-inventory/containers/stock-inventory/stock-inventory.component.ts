@@ -59,6 +59,7 @@ export class StockInventoryComponent implements OnInit {
 
   form = this.fb.group({
     store: this.fb.group({
+      // form validation ractive forms: attaches the required property
       branch: ['', Validators.required],
       code: ['', Validators.required]
     }),

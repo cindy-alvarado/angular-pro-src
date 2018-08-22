@@ -59,6 +59,7 @@ export class StockInventoryComponent implements OnInit {
 
   productMap: Map<number, Product>;
 
+  // 
   form = this.fb.group({
     store: this.fb.group({
       branch: [

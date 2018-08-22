@@ -7,9 +7,14 @@
 import { Component, Input, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
+// NG_Value_Accessor 
+// this can also be set as a provider in the component 
+
 const COUNTER_CONTROL_ACCESSOR = {
   provide: NG_VALUE_ACCESSOR,
+  // controls read and write access to the form control
   useExisting: forwardRef(() => StockCounterComponent),
+  // extending the ngvalue acces with our own stock counter component
   multi: true
 };
 
@@ -46,10 +51,14 @@ export class StockCounterComponent implements ControlValueAccessor {
   private onTouch: Function;
   private onModelChange: Function;
 
+  // passing in a function as the perameter  
+  // passed in via angular   
   registerOnTouched(fn) {
     this.onTouch = fn;
   }
   
+  // passing in a function as the perameter  
+  // passed in via angular   
   registerOnChange(fn) {
     this.onModelChange = fn;
   }

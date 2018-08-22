@@ -33,6 +33,7 @@ export class StockBranchComponent {
   @Input()
   parent: FormGroup;
 
+  // create a custom requird function 
   required(name: string) {
     return (
       this.parent.get(`store.${name}`).hasError('required') && 

@@ -66,6 +66,7 @@ export class StockCounterComponent implements ControlValueAccessor {
 
   focus: boolean;
 
+  // set the Keyboard event type
   onKeyDown(event: KeyboardEvent) {
 
     const handlers = {
@@ -81,12 +82,15 @@ export class StockCounterComponent implements ControlValueAccessor {
     this.onTouch();
   }
 
+  // set the Focus event 
   onBlur(event: FocusEvent) {
     this.focus = false;
     event.preventDefault();
     event.stopPropagation();
     this.onTouch();
   }
+
+  // set the Focus event 
   onFocus(event: FocusEvent) {
     this.focus = true;
     event.preventDefault();
