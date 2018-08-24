@@ -6,13 +6,19 @@ import { MailFolderComponent } from './containers/mail-folder/mail-folder.compon
 import { MailItemComponent } from './components/mail-item/mail-item.component';
 import { MailAppComponent } from './components/mail-app/mail-app.component';
 
+// import mail folder resolve 
 import { MailFolderResolve } from './containers/mail-folder/mail-folder.resolve';
 import { MailService } from './mail.service';
 
+// resolves: preload data before you navagate to a particular route
+// to add a resoleve add a rsolve property to the object in the module file
 export const ROUTES: Routes = [
   {
+    // what route / path 
     path: 'folder/:name',
+    // what componet
     component: MailFolderComponent,
+    // what data 
     resolve: {
       messages: MailFolderResolve
     }
@@ -29,6 +35,7 @@ export const ROUTES: Routes = [
     MailAppComponent,
     MailItemComponent
   ],
+  // add the Service and the resolve as a provider
   providers: [
     MailService,
     MailFolderResolve

@@ -12,6 +12,7 @@ import { MailFolderResolve } from './containers/mail-folder/mail-folder.resolve'
 import { MailService } from './mail.service';
 
 export const ROUTES: Routes = [
+  // created a top level mail segment of the url 
   {
     path: 'mail',
     component: MailAppComponent,

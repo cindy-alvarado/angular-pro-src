@@ -18,6 +18,10 @@ export const ROUTES: Routes = [
       messages: MailFolderResolve
     }
   },
+
+  // configuration for message content preview outlet
+  // sibling route
+  // outlet property contains the name we want to use to display along side another route
   {
     path: 'message/:id',
     component: MailViewComponent,

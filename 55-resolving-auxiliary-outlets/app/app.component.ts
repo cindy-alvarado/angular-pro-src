@@ -1,3 +1,6 @@
+// functionality implemented: create a resolve (load the data in) for a secondary outlet
+// i.e.: load message data 
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 

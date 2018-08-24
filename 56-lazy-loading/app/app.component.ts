@@ -1,3 +1,6 @@
+// functionality implemented; lazy loading (breaking up chuncks of code and presenting them on demand
+// benefits of lazy loading: optimazation of applications, when a large amout of data being loaded
+
 import { Component } from '@angular/core';
 
 @Component({

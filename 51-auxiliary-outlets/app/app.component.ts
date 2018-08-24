@@ -1,3 +1,5 @@
+// functionality implemented: mail item preview in a email client 
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 

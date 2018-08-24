@@ -1,3 +1,6 @@
+// functionality: the alternative to config and navagation to an outlet (alternative to using routerLink)
+// adavantages of using routerLink : a herf is created making it easier to debug and for seo 
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 

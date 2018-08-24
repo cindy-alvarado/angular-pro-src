@@ -8,6 +8,7 @@ import { MailModule } from './mail/mail.module';
 import { AppComponent } from './app.component';
 
 export const ROUTES: Routes = [
+  // create our dashboard path  then lazy load the dashboard module
   { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
   { path: '**', redirectTo: 'mail/folder/inbox' }
 ];

@@ -11,7 +11,9 @@ import { Mail } from '../../models/mail.interface';
   styleUrls: ['mail-view.component.scss'],
   template: `
     <div class="mail-view">
+      <!-- bind the message data to the h2 element .from is simply the from property in our mail object in the db.json--> 
       <h2>{{ (message | async).from }}</h2>
+      <!-- .full is simply the from property in our mail object in the db.json full message content-->
       <p>{{ (message | async).full }}</p>
     </div>
   `

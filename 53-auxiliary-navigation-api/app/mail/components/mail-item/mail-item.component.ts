@@ -21,6 +21,7 @@ import { Mail } from '../../models/mail.interface';
 export class MailItemComponent {
   @Input()
   message: Mail;
+  //inject router into the contructor to make it avavible on init
   constructor(private router: Router) {}
   navigateToMessage() {
     this.router.navigate(

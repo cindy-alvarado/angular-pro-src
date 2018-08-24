@@ -1,3 +1,5 @@
+// functinality implemented: how to naviagate to the outlet 
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 

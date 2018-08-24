@@ -1,3 +1,6 @@
+// functionality implemented: destroy an outlet. Reset an application to the inital state after switching outlets.
+// i.e.: inbox, trash
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
