@@ -1,3 +1,6 @@
+// functinoality implemented : routes guard to prevent authentication between various routes with in an application
+// also prevents user from navagating via the url 
+
 import { Component } from '@angular/core';
 
 @Component({

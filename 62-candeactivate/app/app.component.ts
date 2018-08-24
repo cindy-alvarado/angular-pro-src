@@ -1,3 +1,8 @@
+// functionality implemented: destroying a route based on user repsonse.
+// example: user is presented with a confirmation winbdow asking do you want to 
+// navigate away from a particular screen losing the current content
+
+
 import { Component } from '@angular/core';
 
 @Component({

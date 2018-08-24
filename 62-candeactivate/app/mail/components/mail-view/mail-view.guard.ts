@@ -4,6 +4,7 @@ import { CanDeactivate } from '@angular/router';
 import { MailViewComponent } from './mail-view.component';
 
 @Injectable()
+// window 
 export class MailViewGuard implements CanDeactivate<MailViewComponent> {
   canDeactivate(component: MailViewComponent) {
     if (component.hasUnsavedChanges) {

@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
 
 import { MailModule } from './mail/mail.module';
+
+// route guard
 import { AuthModule } from './auth/auth.module';
 import { AuthGuard } from './auth/auth.guard';
 

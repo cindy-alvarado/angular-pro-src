@@ -1,3 +1,5 @@
+// functionality implemented : custom preload function to extend angular  
+
 import { Component } from '@angular/core';
 
 @Component({

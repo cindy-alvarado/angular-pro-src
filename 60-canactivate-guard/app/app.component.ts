@@ -1,3 +1,5 @@
+// functinality implemented: second way of doing routeGaurd 
+
 import { Component } from '@angular/core';
 
 @Component({

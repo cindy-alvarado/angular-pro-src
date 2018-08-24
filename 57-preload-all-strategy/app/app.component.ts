@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+// functionality implemented: angulars built in preload functionality 
+ 
+ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',

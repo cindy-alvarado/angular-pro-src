@@ -1,3 +1,6 @@
+// stores users sets permissions and user roles 
+// also checks if the user is logged in 
+
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';

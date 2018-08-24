@@ -1,3 +1,6 @@
+// functionality implemented: activaing route guard on child routes via the CanActivateChild Module provided by angular core
+
+
 import { Component } from '@angular/core';
 
 @Component({
