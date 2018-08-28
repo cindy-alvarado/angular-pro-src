@@ -1,3 +1,5 @@
+// 
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserDynamicTestingModule, platformBrowserDynamicTesting } from '@angular/platform-browser-dynamic/testing';
 import { DebugElement, NO_ERRORS_SCHEMA } from '@angular/core';
@@ -39,6 +41,7 @@ describe('StockInventoryComponent', () => {
       declarations: [
         StockInventoryComponent
       ],
+      // allows us to use the StockInventoryComponent without worrying about the child components
       schemas: [NO_ERRORS_SCHEMA],
       providers: [
         { provide: StockInventoryService, useClass: MockStockInventoryService }

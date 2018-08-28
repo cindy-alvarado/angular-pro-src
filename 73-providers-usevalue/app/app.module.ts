@@ -23,6 +23,7 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   providers: [
+    // injects an object
     { provide: 'api', useValue: '/api/pizzas' }
   ]
 })

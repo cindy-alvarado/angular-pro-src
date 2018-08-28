@@ -9,12 +9,31 @@ TestBed.initTestEnvironment(
   platformBrowserDynamicTesting()
 );
 
+/** class ComponentFixture<T> {
+  constructor(componentRef: ComponentRef<T>, ngZone: NgZone | null, _autoDetect: boolean)
+  debugElement: DebugElement
+  componentInstance: T
+  nativeElement: any
+  elementRef: ElementRef
+  changeDetectorRef: ChangeDetectorRef
+  componentRef: ComponentRef<T>
+  ngZone: NgZone | null
+  detectChanges(checkNoChanges: boolean = true): void
+  checkNoChanges(): void
+  autoDetectChanges(autoDetect: boolean = true)
+  isStable(): boolean
+  whenStable(): Promise<any>
+  whenRenderingDone(): Promise<any>
+  destroy(): void
+} **/
+
 describe('StockCounterComponent', () => {
 
   let component: StockCounterComponent;
+  // imported from angular core testing
   let fixture: ComponentFixture<StockCounterComponent>;
   let el: DebugElement;
-
+ 
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [

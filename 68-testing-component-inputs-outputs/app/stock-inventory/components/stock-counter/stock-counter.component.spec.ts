@@ -55,7 +55,9 @@ describe('StockCounterComponent', () => {
   });
 
   it('should not increment over the maximum value', () => {
+    // this is testing the @input decorator 
     component.step = 20;
+    // this is testing the @input decorator
     component.max = 20;
     component.increment();
     component.increment();

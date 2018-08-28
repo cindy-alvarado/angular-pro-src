@@ -17,7 +17,7 @@ function createResponse(body) {
     new Response(new ResponseOptions({ body: JSON.stringify(body) }))
   );
 }
-
+ 
 class MockHttp {
   get() {
     return createResponse([]);
@@ -29,6 +29,7 @@ const productItems = [{ id: 1, price: 10, name: 'Test' }, { id: 2, price: 100, n
 
 describe('StockInventoryService', () => {
 
+  // configure http and service 
   let service: StockInventoryService;
   let http: Http;
 
@@ -43,6 +44,7 @@ describe('StockInventoryService', () => {
     service = bed.get(StockInventoryService);
   });
 
+  // tests  
   it('should get cart items', () => {
     spyOn(http, 'get').and.returnValue(createResponse([...cartItems]));
 
@@ -53,7 +55,7 @@ describe('StockInventoryService', () => {
       });
   });
 
-  it('should get product items', () => {
+  it('should get product items', () => { 
     spyOn(http, 'get').and.returnValue(createResponse([...productItems]));
 
     service.getProducts()

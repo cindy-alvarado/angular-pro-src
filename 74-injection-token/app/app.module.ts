@@ -25,6 +25,7 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   providers: [
+    // the api token replaces the api string 
     { provide: API_TOKEN, useValue: '/api/pizzas' }
   ]
 })

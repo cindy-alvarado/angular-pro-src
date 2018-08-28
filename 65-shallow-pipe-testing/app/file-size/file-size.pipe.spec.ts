@@ -1,7 +1,12 @@
+// allows us to create a componet on the fly
 import { Component } from '@angular/core';
+
+// TestBed: allows us to import modules and create componets to test against
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { BrowserDynamicTestingModule, platformBrowserDynamicTesting } from '@angular/platform-browser-dynamic/testing';
 
+
+// initialize the test enviroment
 TestBed.initTestEnvironment(
   BrowserDynamicTestingModule,
   platformBrowserDynamicTesting()
@@ -24,9 +29,13 @@ describe('FileSizePipe', () => {
     }
 
     let component: TestComponent;
+
+    // The ComponentFixture is a test harness for interacting with the created 
+    // component and its corresponding element.
     let fixture: ComponentFixture<TestComponent>;
     let el: HTMLElement;
 
+    // gets called before each test block (it blocks) 
     beforeEach(() => {
       TestBed.configureTestingModule({
         declarations: [
