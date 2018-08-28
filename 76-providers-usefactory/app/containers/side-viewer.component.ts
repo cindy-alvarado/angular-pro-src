@@ -10,6 +10,7 @@ interface Side {
   price: number
 }
 
+// Factory setup
 export function SideFactory(http) {
   return new FoodService(http, '/api/sides');
 }

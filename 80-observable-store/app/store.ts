@@ -10,7 +10,7 @@ const state: State = {
 };
 
 export class Store {
-
+  // initializes state
   private subject = new BehaviorSubject<State>(state);
   private store = this.subject.asObservable().distinctUntilChanged();
 

@@ -13,7 +13,7 @@ import { Store } from './store';
   `
 })
 export class AppComponent {
-
+ 
   todos$ = this.store.select<any[]>('todos');
 
   constructor(

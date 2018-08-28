@@ -20,6 +20,7 @@ export function DrinkFactory(http) {
     {
       provide: FoodService,
       useFactory: DrinkFactory,
+      // dependences
       deps: [
         Http
       ]
