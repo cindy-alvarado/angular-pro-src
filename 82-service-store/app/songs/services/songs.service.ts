@@ -9,6 +9,7 @@ import 'rxjs/add/operator/do';
 @Injectable()
 export class SongsService {
 
+  // $ replaces a callback
   getPlaylist$ = this.http
     .get('/api/playlist')
     .map(res => res.json())

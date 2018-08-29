@@ -14,16 +14,21 @@ export class Store {
   private subject = new BehaviorSubject<State>(state);
   private store = this.subject.asObservable().distinctUntilChanged();
 
+  // return the value i.e.: playlist: undefined
   get value() {
     return this.subject.value;
   }
 
+  // access the store 
   select<T>(name: string): Observable<T> {
+    // will return the property on the object
     return this.store.pluck(name);
   }
 
+  // set items on the store 
   set(name: string, state: any) {
     this.subject.next({
+      // object spread: expands an expression or array 
       ...this.value, [name]: state
     });
   }

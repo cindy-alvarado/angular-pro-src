@@ -16,6 +16,7 @@ import { SongsPlaylistComponent } from './components/songs-playlist/songs-playli
     SongsListenedComponent,
     SongsPlaylistComponent
   ],
+  // allows us to use the songs components inside the app component
   exports: [
     SongsFavouritesComponent,
     SongsListenedComponent,

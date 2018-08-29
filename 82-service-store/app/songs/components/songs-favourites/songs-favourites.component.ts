@@ -1,3 +1,5 @@
+// does the same as the listened component
+
 import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs/Observable';
